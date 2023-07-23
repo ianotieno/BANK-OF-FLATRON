@@ -34,12 +34,12 @@ function AddTransactionForm({ addTransaction }) {
     return (
       
         <form onSubmit={handleSubmit}>
-          <p>Add Transaction</p>
+          <p>Enter New Transaction</p>
       
            <input 
                 type="text"
                 name="id"
-                placeholder="ID"
+                placeholder="Id"
                 value={transaction.id}
                 onChange={handleChange}
             />

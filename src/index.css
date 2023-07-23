@@ -52,7 +52,7 @@ button:hover {
 
 /* SearchBar Styles */
 div > input[type="text"] {
-  width: 100%;
+  width: 95%;
   margin-bottom: 20px;
 }
 
