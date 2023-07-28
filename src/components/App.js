@@ -12,10 +12,10 @@ function App() {
         fetchTransactions();
     }, []);
 
-    const fetchTransactions = async () => {
-        const response = await fetch('http://localhost:8001/transactions');
-        const data = await response.json();
-        setTransactions(data);
+    const fetchTransactions = () => {
+        fetch('http://localhost:8001/transactions')
+        .then((r)=>r.json())
+        .then((data)=>{setTransactions(data);})
     };
 
     const addTransaction = (transaction) => {
@@ -27,6 +27,7 @@ function App() {
             transaction.description.toLowerCase().includes(searchTerm.toLowerCase())
         );
     };
+ 
 
     return (
         <div className="app">
